@@ -44,7 +44,7 @@ scanf("%d",&a[i]);
 sum+=a[i];  
 }  
 avg=sum/n;  
-printf("Average is %.2f.\n",avg);  
+printf("Average is %.2f:\n",avg);  
   
 return 0;  
 }  
