@@ -44,7 +44,7 @@ scanf("%d",&a[i]);
 sum+=a[i];  
 }  
 avg=sum/n;  
-printf("Average is %.2f:\n",avg);  
+printf("Average is %.2f.\n",avg);  
   
 return 0;  
 }  
@@ -57,25 +57,34 @@ int main()
 int n;  
 printf("Enter weekday in number:  ");  
 scanf("%d",&n);  
-if(n==1)  
-printf("Monday\n");      
-else if(n==2)  
-printf("Tuesday\n");  
-else if(n==3)  
-printf("Wednesday\n");  
-else if(n==4)  
-printf("Thursday\n");  
-else if(n==5)  
-printf("Friday\n");  
-else if(n==6)  
-printf("Saturday\n");  
-else if(n==7)  
-printf("Sunday\n");  
-else  
-printf("Invalid Input\n");  
-  
+    switch(n)
+    {
+        case 1: 
+            printf("Monday");
+            break;
+        case 2: 
+            printf("Tuesday");
+            break;
+        case 3: 
+            printf("Wednesday");
+            break;
+        case 4: 
+            printf("Thursday");
+            break;
+        case 5: 
+            printf("Friday");
+            break;
+        case 6: 
+            printf("Saturday");
+            break;
+        case 7:
+            printf("Sunday");
+            break;
+        default:
+            printf("Invalid weekday number.");
+    }
+    printf("\n");  
 return 0;    
-  
 }  
 
 #### IV `WAP to find whether a number is Even or Odd`  
@@ -145,15 +154,15 @@ return 0;
 void main()  
 {  
 puts("  _____________________  ");  
-puts("| _____________________ |\n");  
-puts("|  1  |  2  |  3  |\t|\n");  
-puts("| ___ | ___ | ___ |\t|\n");  
-puts("|  4  |  5  |  6  |  +  |\n");  
-puts("| ___ | ___ | ___ | ___ |\n");  
-puts("|  7  |  8  |  9  |  -  |\n");  
-puts("| ___ | ___ | ___ | ___ |\n");  
-puts("|\t0\t  |  *  |\n");  
-puts("| _______________ | ___ |\n");  
+puts("| _____________________ |");  
+puts("|  1  |  2  |  3  |\t|");  
+puts("| ___ | ___ | ___ |\t|");  
+puts("|  4  |  5  |  6  |  +  |");  
+puts("| ___ | ___ | ___ | ___ |");  
+puts("|  7  |  8  |  9  |  -  |");  
+puts("| ___ | ___ | ___ | ___ |");  
+puts("|\t0\t  |  *  |");  
+puts("| _______________ | ___ |");  
 }  
   
 #### VIII `WAP for Bubble Sort`  
@@ -323,7 +332,8 @@ int main()
 {  
 printf("Enter 3 numbers:  ");  
 scanf("%d %d %d",&a,&b,&c);  
-printf("The largest of the 3 numbers entered is %d.\n",**largestof3(a,b,c)**); &nbsp; &nbsp;//Function call    
+largestof3(a,b,c);
+printf("The largest of the 3 numbers entered is %d.\n",largest);    
   
 return 0;  
 }  
@@ -489,7 +499,7 @@ scanf("%ld",&n);
 temp=n;  
 while(temp>0)                                                                 
 {  
-digit=temp%10; &nbsp; &nbsp;//Stores one's place    
+digit=temp%10; &nbsp; &nbsp;    
 temp/=10;    
 sum+=digit;    
 }                                                                             
@@ -541,7 +551,7 @@ printf("\n Value of x = %d, value of y = %d\n",x,y);
   
 swap(x,y);
 printf("\n After returning from swap function");  
-printf("\n Value of x = %d, value of y = %d\n",x,y); &nbsp; &nbsp;//No change as addresses of x & y were not involved   
+printf("\n Value of x = %d, value of y = %d\n",x,y); &nbsp; &nbsp;  
 }  
 void swap(int a,int b) 
 {  
@@ -570,7 +580,7 @@ printf("\nBefore calling swap function\n");
 printf("\nValue of x=%d, value of y=%d\n",x,y);  
 swap(&x,&y);  
 printf("\nAfter returning from swap function\n");  
-printf("\nValue of x=%d, value of y=%d\n",x,y); &nbsp; &nbsp;//Interchanged, due to their addresses being swapped    
+printf("\nValue of x=%d, value of y=%d\n",x,y); &nbsp; &nbsp;
 }  
 void swap( int * a , int * b )   
 {  
