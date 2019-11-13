@@ -377,42 +377,36 @@ return 0;
   
 #### XVII `WAP for Linear Search`  
   
-#include<stdio.h>  
-int main()  
-{  
-int a[25],i,m,n,first=0,last,mid;  
-  
-printf("Enter the length of array:  ");  
-scanf("%d",&m);  
-printf("Enter %d elements in ascending order:  ",m);  
-for(i=0 ; i<m ; i++)  
-scanf("%d",&a[i]);  
-  
-printf("Enter value to find:  ");  
-scanf("%d",&n);  
-  
-last=n-1;   
-mid=(first+last)/2;  
-while(first<=last)  
-{  
-if(a[mid]<n)  
-first=mid+1;  
-else if(a[mid]==n)  
-{  
-printf("%d found at position #%d.\n",n,mid+1);    
-break;  
-}  
-else  
-last=mid-1;  
-                                                                                   
-mid=(first+last)/2;                                                           
-}  
-  
-if(first>last)    
-printf("%d not found in the entered array!\n",n);   
-  
-return 0;                                                                     
-}  
+#include <stdio.h>
+ 
+int main()
+{
+  int array[100], search, c, n;
+ 
+  printf("Enter number of elements in array\n");
+  scanf("%d", &n);
+ 
+  printf("Enter %d integer(s)\n", n);
+ 
+  for (c = 0; c < n; c++)
+    scanf("%d", &array[c]);
+ 
+  printf("Enter a number to search\n");
+  scanf("%d", &search);
+ 
+  for (c = 0; c < n; c++)
+  {
+    if (array[c] == search)
+    {
+      printf("%d is present at location %d.\n", search, c+1);
+      break;
+    }
+  }
+  if (c == n)
+    printf("%d isn't present in the array.\n", search);
+ 
+  return 0;
+}
   
 #### XVIII `WAP for Matrix Addition`  
   
